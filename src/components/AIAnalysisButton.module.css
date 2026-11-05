@@ -1,0 +1,25 @@
+.root{position:relative;margin:16px 0;color:#eee;font:inherit;max-width:100%;overflow-anchor:none}
+.root .button,.panel{position:absolute;top:0;left:0;box-sizing:border-box;border:1px solid #626262;color:#eee;background:linear-gradient(#282828,#161616);box-shadow:inset 0 1px 0 #ffffff30;overflow:hidden}
+.root .button{margin:0;display:grid;place-items:center;width:64px;height:64px;min-height:64px;padding:0;isolation:isolate;cursor:pointer}
+.root .button::before,.root .button::after{content:none}
+.root .button:disabled{opacity:.5;cursor:not-allowed}
+.root .button[data-busy=true]{opacity:1;cursor:wait}
+.root .button:enabled:active .star{transform:translateY(3px) scale(.9)}
+.button:focus-visible,.close:focus-visible,.cancel:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.star{font-size:24px;transition:transform 120ms ease}
+.pulse{position:absolute;inset:6px;border:1px solid #ddd;border-radius:50%;opacity:0;pointer-events:none}
+.button[data-busy=true] .pulse{animation:pulse 1600ms ease-in-out infinite}
+.letter{display:inline-block}
+.letter[data-busy=true]{animation:wave 1400ms ease-in-out infinite}
+.caption{position:absolute;left:80px;right:0;top:18px;font-size:13px;line-height:1.5}
+.status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.panel{width:100%;padding:22px;font:inherit;outline:none}
+.panel h3{margin:16px 0;font-size:25px;line-height:1.2}
+.panel p{color:#bbb;line-height:1.65;font-size:14px}
+.panel .answer{color:#f0f0f0;white-space:pre-wrap;overflow-wrap:anywhere}
+.kicker{font-size:10px;letter-spacing:.1em;color:#bdbdbd}
+.root .close,.root .cancel{border:1px solid #777;border-radius:16px;padding:10px 16px;min-height:44px;background:#292929;color:#fff;font:inherit;cursor:pointer}
+.root .cancel{position:absolute;top:68px;left:0;font-size:12px}
+@keyframes pulse{0%,100%{opacity:.15;transform:scale(.78)}50%{opacity:.85;transform:scale(1)}}
+@keyframes wave{50%{opacity:.45;transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){.star{transition:none}.root .pulse,.letter[data-busy=true]{animation:none}.button[data-busy=true] .pulse{opacity:.5}}

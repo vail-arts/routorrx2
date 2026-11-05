@@ -1,0 +1,48 @@
+{
+  "name": "routorrx-v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "predev": "node scripts/prepare-map.mjs",
+    "prebuild": "node scripts/prepare-map.mjs",
+    "test:integration": "node tests/integration.mjs",
+    "lint": "eslint src --max-warnings=0",
+    "test:e2e": "playwright test",
+    "test:assistant": "playwright test --config playwright.assistant.config.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.32.0",
+    "@paper-design/shaders-react": "^0.0.82",
+    "@phosphor-icons/react": "^2.1.10",
+    "@supabase/supabase-js": "^2.119.0",
+    "gsap": "3.15.0",
+    "leaflet": "^1.9.4",
+    "maplibre-gl": "6.16.0",
+    "motion": "^14.9.1",
+    "next": "16.4.3",
+    "openai": "^7.50.0",
+    "qrcode-generator": "^2.0.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "^10.14.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

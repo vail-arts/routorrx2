@@ -1,0 +1,7 @@
+export const plates=[
+  {id:'route',url:'/atlas/route.svg',label:'01 / WALKING ROUTES',title:'One walk, several choices',alt:'A pale walking line connects two endpoints on an illustrated street grid.',detail:'Compare distance and provider time when alternatives are available. A shorter route can still have difficult crossings.'},
+  {id:'crossing',url:'/atlas/crossing.svg',label:'02 / CROSSINGS',title:'The last few metres',alt:'An illustrated zebra crossing between two kerbs.',detail:'A street map cannot confirm a dropped kerb or an unobstructed footpath. Field verification is planned for Silvassa.'},
+  {id:'weather',url:'/atlas/weather.svg',label:'03 / WEATHER',title:'Before you head out',alt:'A sun, cloud and rain marks over a street-grid illustration.',detail:'Request temperature and humidity at your destination. Weather covers an area. Shade and surface conditions along the route still need local observations.'},
+  {id:'report',url:'/atlas/report.svg',label:'04 / FIELD NOTES',title:'A note from the pavement',alt:'Illustrated observation card on a street grid.',detail:'Save a road-condition draft at your chosen point. It stays on this device. Public reports will require moderation.'},
+  {id:'film',url:'/atlas/film.jpg',label:'05 / PROJECT FILM',title:'Inside the demo ad',alt:'A silver fan-shaped frame from the supplied routorrX motion film.',detail:'This still comes from the project’s 15-second film. Watch the complete clip using Watch demo ad on Home or Experience.'}
+];
