@@ -31,10 +31,11 @@ export default function NavigationCard({
   const idxSafer = routes.findIndex(r => (r as any).type === 'safer');
   const idxAccess = routes.findIndex(r => (r as any).type === 'accessible');
 
+  // REMOVED EMOJIS FROM TABS
   const tabs = [
-    { id: 'shortest', label: 'Shortest', icon: '🚶‍♂️', route: routes[idxShort] || active, index: idxShort !== -1 ? idxShort : 0 },
-    { id: 'safer', label: 'Safer', icon: '🛡️', route: routes[idxSafer] || active, index: idxSafer !== -1 ? idxSafer : 0 },
-    { id: 'accessible', label: 'Accessible', icon: '♿', route: routes[idxAccess] || active, index: idxAccess !== -1 ? idxAccess : 0 }
+    { id: 'shortest', label: 'Shortest', route: routes[idxShort] || active, index: idxShort !== -1 ? idxShort : 0 },
+    { id: 'safer', label: 'Safer', route: routes[idxSafer] || active, index: idxSafer !== -1 ? idxSafer : 0 },
+    { id: 'accessible', label: 'Accessible', route: routes[idxAccess] || active, index: idxAccess !== -1 ? idxAccess : 0 }
   ];
 
   const activeTab = tabs.find(t => t.index === selected) || tabs[0];
@@ -136,7 +137,8 @@ export default function NavigationCard({
                         key={tab.id} onClick={() => setSelected(tab.index)}
                         style={{ flex: 1, padding: '12px 6px', borderRadius: '12px', textAlign: 'center', cursor: 'pointer', background: isActive ? '#222' : 'transparent', border: '1px solid ' + (isActive ? '#555' : 'transparent'), transition: 'all 0.2s' }}
                       >
-                        <div style={{ fontSize: '11px', color: '#aaa', marginBottom: '4px' }}>{tab.icon} {tab.label}</div>
+                        {/* REMOVED {tab.icon} */}
+                        <div style={{ fontSize: '11px', color: '#aaa', marginBottom: '4px' }}>{tab.label}</div>
                         <div style={{ fontSize: '14px', fontWeight: 'bold', color: isActive ? '#fff' : '#888' }}>{time} min</div>
                       </div>
                     );
