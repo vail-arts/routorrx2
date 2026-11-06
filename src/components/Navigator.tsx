@@ -119,10 +119,10 @@ export default function Navigator({embedded=false}:{embedded?:boolean}) {
           setTarget('to');
           setMessage('Location found. Search for a destination.');
         },
-        (err) => {
-          console.warn("Auto-location error:", err);
-          setMessage('Choose a starting point or search.');
-        },
+            (err) => {
+      console.warn("Auto-location error:", err.message || "Timeout");
+      setMessage('Choose a starting point or search.');
+    },
         { enableHighAccuracy: true, timeout: 10000 }
       );
     }

@@ -160,18 +160,7 @@ export default function GuardianSOS({
       <div style={{ marginTop: '20px', padding: '24px', border: '1px solid #333', borderRadius: '24px', background: '#111', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         
         <h3 style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold', marginBottom: '8px' }}>SOS & Safety</h3>
-                <h3 style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold', marginBottom: '8px' }}>SOS & Safety</h3>
         
-        {/* --- ADD THIS TEST BUTTON --- */}
-        <button 
-          onClick={triggerFallPrompt} 
-          style={{ fontSize: '10px', background: '#333', color: '#fff', padding: '4px 8px', borderRadius: '4px', border: 'none', marginBottom: '10px' }}
-        >
-          [Dev] Force Fall
-        </button>
-        {/* ---------------------------- */}
-
-        <p style={{ color: '#888', fontSize: '13px', marginBottom: '24px', textAlign: 'center' }}>Quick help, trusted contacts, and real-time location sharing when you need it most.</p>
         <p style={{ color: '#888', fontSize: '13px', marginBottom: '24px', textAlign: 'center' }}>Quick help, trusted contacts, and real-time location sharing when you need it most.</p>
 
         <button 
@@ -198,7 +187,7 @@ export default function GuardianSOS({
           </div>
           
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <input type="checkbox" id="fall-toggle" checked={fallDetectionEnabled} onChange={(e) => setFallDetectionEnabled(e.target.checked)} style={{ display: 'none' }} />
+            <input type="checkbox" id="fall-detection" checked={fallDetectionEnabled} onChange={(e) => setFallDetectionEnabled(e.target.checked)} style={{ display: 'none' }} />
             <div style={{ width: '24px', height: '24px', borderRadius: '50%', border: fallDetectionEnabled ? '2px solid #ff4d4f' : '2px solid #555', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               {fallDetectionEnabled && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ff4d4f" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>}
             </div>
