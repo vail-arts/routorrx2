@@ -76,4 +76,5 @@ The opening wordmark uses a locally installed Black Sansa Thin when available. F
 Homepage word rotation is in src/components/MorphText.tsx. StudioDock.tsx controls right-side dock destinations and scroll behavior: upward scroll parks the rail, downward scroll restores it, and the handle reopens it manually. Public liquid edges loop during hover using one shared texture. Try Out is excluded.
 #   r o u t o r r X - V 2  
  #   r o u t o r r X - V 2  
+ #   r o u t o r r x 2  
  
